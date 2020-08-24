@@ -1,0 +1,25 @@
+{
+  "name": "express-sequelize-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --ext js,graphql --exec babel-node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3",
+    "sequelize": "^6.3.4",
+    "tedious": "^9.1.0",
+    "uuidv4": "^6.2.3"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^2.0.4"
+  }
+}
