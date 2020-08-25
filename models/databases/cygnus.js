@@ -1,17 +1,21 @@
 import { Sequelize } from 'sequelize'
 
-const cygnus = new Sequelize('cygnus', 'sa', '123sa', {
-  host: 'localhost',
-  dialect: 'mssql',
-  pool: {
-    max: 5,
-    min: 0,
-    idle: 10000
-  },
-  define: {
-    timestamps: false
+const cygnus = new Sequelize(
+  process.env.DB,
+  process.env.DB_USER,
+  process.env.DB_PWD, {
+    host: process.env.DB_HOST,
+    dialect: 'mssql',
+    pool: {
+      max: 5,
+      min: 0,
+      idle: 10000
+    },
+    define: {
+      timestamps: false
+    }
   }
-})
+)
 
 cygnus
   .authenticate()
