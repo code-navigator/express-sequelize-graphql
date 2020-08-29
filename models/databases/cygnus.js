@@ -1,9 +1,13 @@
+import { config } from 'dotenv'
 import { Sequelize } from 'sequelize'
+
+config()
 
 const cygnus = new Sequelize(
   process.env.DB,
   process.env.DB_USER,
-  process.env.DB_PWD, {
+  process.env.DB_PWD,
+  {
     host: process.env.DB_HOST,
     dialect: 'mssql',
     pool: {
